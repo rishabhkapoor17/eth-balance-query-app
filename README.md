@@ -26,6 +26,13 @@ The client facing APIs are defined as follows:
 - GET (/api/balances) getBalances: Takes a String address, LocalDateTime start (ex: 2023-01-01T00:00:00), LocalDateTime end as request query params, returns a list of balance records for the specified address and timeframe
 - POST (/api/update-interval): Takes a String intervalMs as a request query param, returns once the query interval for balances is updated
 
+On backend service launch and run, balances will begin to be queried from your currently set address from the Base RPC endpoint at a default interval of 6000s (1 minute). The current address
+is retrieved from the address_config table. On initial run, this table will be empty, so there will likely be an error getting the current address in the logs; this is to be expected. Once you
+set your wallet address through the frontend input field, the current address will be updated and the app will begin fetching balances at the specified interval. 
+
+The frontend application displays a chart with the balances stored in the balance_records_table, with endTime for the chart set to app launch time and startTime
+for the chart set to one day beforehand. The start and end times can be adjusted by the user using the DatePicker component. The query interval for fetching ETH balances is set by default to 6000 ms (1 minute), but can be modified through user input in the text field. The acceptable time range for querying is between 1000ms (1 second) and 86400000ms (1 day) for simplicity. The address field will be empty on application launch, and should be filled by the user with a valid address (starting with 0x, 42 characters total). Click "Apply Changes" for the inputs to take effect. The chart will be updated in real-time as new balances are fetched, given the current time is within the configured start and end time.
+
 ## Installation and running the backend service
 1. Clone the repository:
    1. git clone https://github.com/rishabhkapoor17/eth-balance-query-app
@@ -63,6 +70,15 @@ Troubleshooting:
    2. npm install
 2. Run the app
    1. npm start
-  
+
+## Testing
+1. You can use addresses from the Base mainnet here: https://docs.base.org/docs/base-contracts/ to test the balance querying application.
+2. By default:
+   1. The endTime is configured at application launch time and the startTime is configured at one day before application launch time
+   2. The Query interval is set to 6000 ms (1 minute)
+   
 ## Walkthrough
 Walkthrough videos have been provided in this repository to show you how to run the application. It is split into 3 parts. Be sure to watch all parts for the full walkthrough.
+1. Part 1: https://vimeo.com/1018197799?share=copy#t=0
+2. Part 2: https://vimeo.com/1018198657?share=copy#t=0
+3. Part 3: https://vimeo.com/1018200389?share=copy#t=0
