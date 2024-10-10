@@ -28,28 +28,28 @@ The client facing APIs are defined as follows:
 
 ## Installation and running the backend service
 1. Clone the repository:
-   ```bash
-   git clone <repository-url>
+   1. ```bash
+   2. git clone <repository-url>
 2. Configure and run your MySQL instance:
-   brew services start mysql
-   Create a MySQL user to use with the app and input the login values in the application.properties file:
-   mysql -u root -p
-   You will be prompted for a password.
-   CREATE USER 'eth-app-user'@'localhost' IDENTIFIED BY 'eth-app-password-111';
+   1. brew services start mysql
+   2. Create a MySQL user to use with the app and input the login values in the application.properties file:
+   3. mysql -u root -p
+   4. You will be prompted for a password.
+   5. CREATE USER 'eth-app-user'@'localhost' IDENTIFIED BY 'eth-app-password-111';
    1. Create a MySQL database
-      Create a database under this user:
-      mysql -u eth-app-user -p
-      You will be prompted for a password.
-      CREATE DATABASE balance_records_db;
+      1. Create a database under this user:
+      2. mysql -u eth-app-user -p
+      3. You will be prompted for a password.
+      4. CREATE DATABASE balance_records_db;
    2. Add it to the application.properties file like so:
-      spring.datasource.url=jdbc:mysql://localhost:3306/balance_records_db
-      This assumes your MySQL instance is running on localhost with port 3306. 
+      1. spring.datasource.url=jdbc:mysql://localhost:3306/balance_records_db
+      2. This assumes your MySQL instance is running on localhost with port 3306. 
    3. The Spring JPA Repository will take care of creating the necessary tables on app run
 3. Build this project with Gradle:
-   cd <backend-directory>
-   ./gradlew build
+   1. cd <backend-directory>
+   2. ./gradlew build
 4. Run the service:
-   ./gradlew bootRun
+   1. ./gradlew bootRun
 
 Troubleshooting:
 - Check the system logs on application start
