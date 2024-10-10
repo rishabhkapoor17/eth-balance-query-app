@@ -28,8 +28,7 @@ The client facing APIs are defined as follows:
 
 ## Installation and running the backend service
 1. Clone the repository:
-   1. ```bash
-   2. git clone <repository-url>
+   1. git clone <repository-url>
 2. Configure and run your MySQL instance:
    1. brew services start mysql
    2. Create a MySQL user to use with the app and input the login values in the application.properties file:
@@ -59,7 +58,7 @@ Troubleshooting:
 
 ## Running the frontend app
 1. Install necessary dependencies
-   cd <frontend-director>
-   npm install
+   1. cd <frontend-directory>
+   2. npm install
 2. Run the app
-   npm start
+   1. npm start
