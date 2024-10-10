@@ -5,7 +5,7 @@ This application runs continuously based on a configured schedule, and queries E
 wallet address. The configured schedule is default set to run every 60000ms (1 minute), but can be configured
 to run every second up until every day. The specified wallet address must start with "0x" and must be 42 characters long 
 (including "0x"). The Web3 client is used to query the ETH balance, using the ethereum rpc url defined in the 
-application.properties file. By default, it is defined to be on the Base network (https://mainnet.base.org).
+application.properties file. By default, it is defined to query the Base RPC Endpoint (https://mainnet.base.org).
 
 The app keeps track of a current address using a boolean value, and stores addresses (along with the last updated time 
 and isCurrent boolean) in an address repository (address_config table). The app also keeps track of balance records (which are 
