@@ -8,7 +8,7 @@ to run every second up until every day. The specified wallet address must start 
 application.properties file. By default, it is defined to be on the Base network (https://mainnet.base.org).
 
 The app keeps track of a current address using a boolean value, and stores addresses (along with the last updated time 
-and isCurrent boolean) in an address repository (address_config). The app also keeps track of balance records (which are 
+and isCurrent boolean) in an address repository (address_config table). The app also keeps track of balance records (which are 
 populated with the wallet address, timestamp, and balance) in a balance repository (balance_records_table). These tables 
 are stored in a database which is defined in the application.properties file in the spring.datasource.url attribute. 
 This attribute is by default set to a local MySQL datasource instance, with a "balance_records_db" database created. A 
