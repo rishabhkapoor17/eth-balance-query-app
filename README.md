@@ -63,3 +63,6 @@ Troubleshooting:
    2. npm install
 2. Run the app
    1. npm start
+  
+## Walkthrough
+Walkthrough videos have been provided in this repository to show you how to run the application. It is split into 3 parts. Be sure to watch all parts for the full walkthrough.
