@@ -28,7 +28,8 @@ The client facing APIs are defined as follows:
 
 ## Installation and running the backend service
 1. Clone the repository:
-   1. git clone <repository-url>
+   1. git clone https://github.com/rishabhkapoor17/eth-balance-query-app
+   2. cd eth-balance-query-app
 2. Configure and run your MySQL instance:
    1. brew services start mysql
    2. Create a MySQL user to use with the app and input the login values in the application.properties file:
@@ -45,7 +46,7 @@ The client facing APIs are defined as follows:
       2. This assumes your MySQL instance is running on localhost with port 3306. 
    3. The Spring JPA Repository will take care of creating the necessary tables on app run
 3. Build this project with Gradle:
-   1. cd <backend-directory>
+   1. cd backend
    2. ./gradlew build
 4. Run the service:
    1. ./gradlew bootRun
@@ -58,7 +59,7 @@ Troubleshooting:
 
 ## Running the frontend app
 1. Install necessary dependencies
-   1. cd <frontend-directory>
+   1. cd frontend
    2. npm install
 2. Run the app
    1. npm start
