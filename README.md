@@ -54,22 +54,24 @@ for the chart set to one day beforehand. The start and end times can be adjusted
    3. The Spring JPA Repository will take care of creating the necessary tables on app run
 3. Build this project with Gradle:
    1. cd backend
-   2. ./gradlew build
+   2. chmod +x gradlew (You may need to run this to add executable permissions to the ./gradlew file)
 4. Run the service:
    1. ./gradlew bootRun
+
+## Running the frontend app
+1. Install necessary dependencies
+   1. cd eth-balance-query-app
+   2. cd frontend
+   3. npm install
+2. Run the app
+   1. npm start
 
 Troubleshooting:
 - Check the system logs on application start
 - Ensure your MySQL instance is running on the correct port, which is correctly specified in your spring.datasource.url attribute in the application.properties file
 - Ensure your application.properties file contains your correct MySQL username and password
 - Ensure your MySQL user has a database created which matches the one provided in your spring.datasource.url attribute in the application.properties file. You can double check by running SHOW DATABASES; on your MySQL user through CLI
-
-## Running the frontend app
-1. Install necessary dependencies
-   1. cd frontend
-   2. npm install
-2. Run the app
-   1. npm start
+- You may need to build your project with ./gradlew build
 
 ## Testing
 1. You can use addresses from the Base mainnet here: https://docs.base.org/docs/base-contracts/ to test the balance querying application.
