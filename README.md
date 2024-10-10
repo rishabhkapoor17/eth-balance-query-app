@@ -11,8 +11,8 @@ The app keeps track of a current address using a boolean value, and stores addre
 and isCurrent boolean) in an address repository (address_config table). The app also keeps track of balance records (which are 
 populated with the wallet address, timestamp, and balance) in a balance repository (balance_records_table). These tables 
 are stored in a database which is defined in the application.properties file in the spring.datasource.url attribute. 
-This attribute is by default set to a local MySQL datasource instance, with a "balance_records_db" database created. A 
-dependency in the build.gradle file (runtimeOnly 'com.mysql:mysql-connector-j') is defined to allow connections to MySQL. 
+This attribute is by default set to a local MySQL datasource instance, for database "balance_records_db", which must be created 
+before app run. A dependency in the build.gradle file (runtimeOnly 'com.mysql:mysql-connector-j') is defined to allow connections to MySQL. 
 The app can be configured to use a different datasource if so desired. The MySQL instance is defined to have a username/
 password of eth-app-user/eth-app-password-111, which are also defined in the application.properties file. 
 
