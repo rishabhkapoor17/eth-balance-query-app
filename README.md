@@ -72,6 +72,7 @@ Troubleshooting:
 - Ensure your application.properties file contains your correct MySQL username and password
 - Ensure your MySQL user has a database created which matches the one provided in your spring.datasource.url attribute in the application.properties file. You can double check by running SHOW DATABASES; on your MySQL user through CLI
 - You may need to build your project with ./gradlew build
+- If you have the backend service running, you can try sending POST/GET requests to the APIs directly using Postman or another API tool to http://localhost:8080/api/...
 
 ## Testing
 1. You can use addresses from the Base mainnet here: https://docs.base.org/docs/base-contracts/ to test the balance querying application.
