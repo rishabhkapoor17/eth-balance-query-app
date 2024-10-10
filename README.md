@@ -20,12 +20,11 @@ The Gradle as the build tool system, and all Gradle dependencies are defined in 
 The app uses SpringBoot as the Java framework, to make use of the Spring Jpa repository.
 
 The client facing APIs are defined as follows:
-POST (/api/address/current) setCurrentAddress: Takes a String address in the request body as plaintext (Content type text/plain, raw), returns once the current address is updated
-GET (/api/address/current) getCurrentAddress: Returns the current address
-GET (/api/address/exists/{address}) addressExists: Takes a String address in the request path, returns a boolean for if the address exists in the repository.
-
-GET (/api/balances) getBalances: Takes a String address, LocalDateTime start (ex: 2023-01-01T00:00:00), LocalDateTime end as request query params, returns a list of balance records for the specified address and timeframe
-POST (/api/update-interval): Takes a String intervalMs as a request query param, returns once the query interval for balances is updated
+- POST (/api/address/current) setCurrentAddress: Takes a String address in the request body as plaintext (Content type text/plain, raw), returns once the current address is updated
+- GET (/api/address/current) getCurrentAddress: Returns the current address
+- GET (/api/address/exists/{address}) addressExists: Takes a String address in the request path, returns a boolean for if the address exists in the repository.
+- GET (/api/balances) getBalances: Takes a String address, LocalDateTime start (ex: 2023-01-01T00:00:00), LocalDateTime end as request query params, returns a list of balance records for the specified address and timeframe
+- POST (/api/update-interval): Takes a String intervalMs as a request query param, returns once the query interval for balances is updated
 
 ## Installation and running the backend service
 1. Clone the repository:
